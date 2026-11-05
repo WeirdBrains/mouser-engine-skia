@@ -1,18 +1,24 @@
 [package]
 name = "mouser-engine-skia"
-edition = "2024"
 version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
 license = "BSD-3-Clause"
+authors = ["Mouser Contributors"]
 description = "Mouser's Skia renderer (engine \"skia\") as an engine library on the C ABI (mouser-engine-abi v2)"
-repository = ""
-publish = false
+repository = "https://github.com/WeirdBrains/mouser-engine-skia"
+homepage = "https://github.com/WeirdBrains/mouser-engine-skia"
+readme = "README.md"
+keywords = ["terminal", "mouser", "renderer", "skia"]
+categories = ["rendering"]
+exclude = ["/.github", "/legacy"]
 
 [lib]
 name = "mouser_engine_skia"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-mouser-engine-abi = { path = "../mouser-engine-abi" }
+mouser-engine-abi = "1.0"
 skia-safe = { version = "0.156.0", features = ["gl"] }
 glutin = "0.32.3"
 raw-window-handle = "0.6"
